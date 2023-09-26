@@ -1,3 +1,3 @@
 abstract class ITVShowsRepository {
-  Future<dynamic> getMostPopularTvShows();
+  Future<dynamic> getMostPopularTvShows(String page);
 }

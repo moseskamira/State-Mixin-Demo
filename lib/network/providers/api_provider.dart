@@ -8,9 +8,9 @@ class ApiProvider extends GetConnect {
     httpClient.defaultContentType = 'application/json';
   }
 
-  Future<dynamic> getMostPopularTvShow() async {
+  Future<dynamic> getMostPopularTvShow(String page) async {
     try {
-      final response = await get(Apis.mostPopularShows);
+      final response = await get('${Apis.mostPopularShows}?page=$page');
       if (response.status.hasError) {
         return Future.error(response.statusText!);
       } else {

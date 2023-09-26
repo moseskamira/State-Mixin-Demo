@@ -1,5 +1,4 @@
 import 'package:custom_loader_state_mixin/network/providers/api_provider.dart';
-
 import '../interfaces/itv_shows_repository.dart';
 
 class TvShowsRepository extends ITVShowsRepository {
@@ -8,7 +7,7 @@ class TvShowsRepository extends ITVShowsRepository {
   TvShowsRepository(this.apiProvider);
 
   @override
-  Future<dynamic> getMostPopularTvShows() async {
-    return await apiProvider.getMostPopularTvShow();
+  Future<dynamic> getMostPopularTvShows(String page) async {
+    return await apiProvider.getMostPopularTvShow(page);
   }
 }
